@@ -1,0 +1,125 @@
+.footer {
+    background-color: $mainColor;
+    padding: 24px 0;
+    // .footer__wrapper
+    &__wrapper {
+        padding: 0 15px;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            display: block;
+        }
+    }
+    // .footer__logo
+    &__logo {
+        flex: 1 1 100%;
+        display: block;
+        img {
+            width: 232px;
+            display: block;
+            margin: 0 auto 52px auto;
+
+        }
+    }
+    // .footer__body
+    &__body {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+     
+    }
+    // .footer__form
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    // .footer__form-name
+    &__form-name {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 26px;
+        color: #FEFBF9;
+        margin-bottom: 24px;
+    }
+    // .footer__lang
+    &__lang {
+        width: 235px;
+        min-height: 36px;
+        background: #FBFBFB;
+        border: 0.5px solid rgba(22, 19, 16, 0.6);
+
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        color: rgba(22, 19, 16, 0.6);
+        margin-bottom: 12px;
+    }
+    // .footer__curr
+    &__curr {
+        width: 235px;
+        min-height: 36px;
+        background: #FBFBFB;
+        border: 0.5px solid rgba(22, 19, 16, 0.6);
+
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        color: rgba(22, 19, 16, 0.6);
+    }
+    // .footer__menu
+    &__menu {
+        display: flex;
+    }
+    // .footer__list
+    &__list {
+        &:not(:last-child) {
+            margin-right: 96px;
+        }
+    }
+    // .footer__item
+    &__item {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+        color: #FEFBF9;
+        margin-bottom: 4px;
+        &:first-child {
+            margin-bottom: 12px;
+        }
+    }
+    // .footer__link
+    &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #FEFBF9;
+        margin-bottom: 4px;
+        transition: all 0.3s ease;
+        &:hover {
+            color: $secondColor;
+        }
+    }
+    &__sub-wrapper {
+        padding: 24px 15px 0 15px;
+    }
+    // .footer__privacy
+    &__privacy {
+        display: flex;
+        justify-content: flex-end;
+    }
+    // .footer__text
+    &__text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        color: #FEFBF9;
+    }
+}

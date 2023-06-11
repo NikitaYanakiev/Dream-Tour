@@ -1,0 +1,42 @@
+$mainColor: #0A2632;
+$secondColor: #D27B32;
+
+
+.btn {
+    padding: 12px 40px;
+    background: $secondColor;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #fefbf9;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: #9b5b26;
+    }
+    &:active {
+        transform: scale(0.90);
+    }
+    &_blue {
+        background-color: $mainColor;
+        &:hover {
+            background-color: #041720;
+        }
+        &:active {
+            transform: scale(0.90);
+        }
+    }
+}
+.link {
+    padding: 12px 40px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #0a2632;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: $secondColor;
+        color: #fff;
+    }
+}

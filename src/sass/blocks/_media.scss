@@ -1,0 +1,386 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .places {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: center;
+            .horizonal, .vertical, .big {
+                grid-column: unset;
+                grid-row: unset;
+
+            }
+        }
+    }
+    .sign {
+        &__apps {
+            flex: 0 1 400px;
+        }
+        &__mail {
+            flex: 0 1 400px;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .header {
+        padding: 15px 0;
+        &__container {
+            max-width: 100%;
+        }
+        &__logo {
+            flex: 0 0 180px;
+        }
+        &__menu {
+           flex: 0 1 40%;
+        }
+        &__login {
+            flex: 0 1 40%;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+    .banner {
+        &__form {
+            flex-wrap: wrap;
+        }
+        &__region {
+            flex: 1 1 100%;
+            margin-bottom: 10px;
+        }
+        &__date-from {
+            flex: 1 1 50%;
+        }
+        &__date-to {
+            flex: 1 1 50%;
+        }
+        &__btn {
+            flex: 1 1 100%;
+            margin: 15px auto 0 auto;
+        }
+    }
+    .footer {
+        &__body {
+            align-items: stretch;
+        }
+        &__logo {
+            flex: 1 1 auto;
+            img {
+                margin: 0 auto 0 0;
+            }
+        }
+        &__menu {
+            margin: 24px auto 0 auto;
+        }
+    }
+    .places {
+        & .places__item-title {
+            margin-top: 0;
+        }
+        & .places__item-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        & .places__item-img {
+            img {
+                transform: scale(1.13);
+                filter:brightness(0.55)
+            }
+        }
+    }
+    .sign {
+        &__container {
+            padding: 0;
+            display: block;
+        }
+        &__text {
+            margin: 0 auto 26px auto;
+        }
+        &__apps {
+            margin-bottom: 48px;
+        }
+        &__line {
+            display: none;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .header {
+        padding: 10px 0;
+        &__login {
+            flex: 0 1 45%;
+        }
+        &__burger {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 40px;
+            z-index: 50;
+            span {
+                position: absolute;
+                width: 35px;
+                height: 3px;
+                background-color: $secondColor;
+                ;
+                left: 5px;
+                top: 18px;
+                transition: all 0.3s ease-out;
+                &:before, &:after {
+                    content: '';
+                    position: absolute;
+                    width: 30px;
+                    height: 3px;
+                    background-color: #fff;
+                    top: -10px;       
+                    transition: all 0.3s ease-out;
+                }
+                &:after {
+                    top: 10px;
+                }
+            }
+        }
+        &__menu {
+            position: fixed;
+            left: -100%;
+            top: 0;
+            background-color: $mainColor;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-out;
+            overflow: auto;
+            padding: 120px 0 20px 0;
+            z-index: 20;
+        }
+        &__list {
+            display: block;
+            text-align: center;
+        }
+        &__item {
+            padding: 10px 0;
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+        &__link {
+            font-size: 24px;
+        }
+        &__sign {
+            padding: 8px 25px;
+        }
+        &__regist {
+            padding: 8px 25px;
+        }
+    }
+    .header.active {
+        .header__menu {
+            left: 0;
+            
+        }
+        .header__burger {
+            span {
+                width: 0;
+                &:before {
+                    transform: rotate(45deg);
+                    top: 0;
+                    background-color:#fff;
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                    top: 0;
+                    background-color:#fff;
+                }
+            }
+        }
+    }
+    .banner {
+        padding: 80px 0;
+        &__title {
+            font-size: 28px;
+        }
+    }
+    .footer {
+        &__lang {
+            width: 150px;
+        }
+        &__curr {
+            width: 150px;
+        }
+        &__list {
+            &:not(:last-child) {
+                margin-right: 50px;
+            }
+        }
+    }
+    .places {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, calc(100% + 20px));
+            grid-auto-rows: 280px;
+            justify-content: center;
+        }
+        & .places__item-title {
+            margin-top: 0;
+        }
+        & .places__item-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        & .places__item-img {
+            img {
+                transform: scale(1.13);
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    .header {
+        padding: 5px 0;
+        &__logo {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            img {
+                width: 232px;
+            }
+        }
+        &__login {
+            flex: 1 1 auto;
+        }
+    }
+    .footer {
+        &__logo {
+            margin: 0 10px 15px 10px;
+            img {
+                margin: 0 auto;
+                width: 160px;
+            }
+        }
+        &__form {
+            margin: 0 auto;
+        }
+        &__form-name {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        &__lang {
+            width: 100px;
+            min-height: 25px;
+            margin: 0 auto 8px auto;
+        }
+        &__curr {
+            width: 100px;
+            min-height: 25px;
+            margin: 0 auto 0 auto;
+        }
+        &__sub-wrapper {
+            padding: 15px 5px 0 5px;
+        }
+        &__menu {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        &__list {
+            &:not(:last-child){
+                margin-right: 25px;
+                
+            }
+        }
+        &__item {
+            font-size: 14px;
+            line-height: 16px;
+            
+        }
+        &__link {
+            font-size: 12px;
+            line-height: 16px;
+        }
+        &__body {
+            margin-bottom: 25px;
+        }
+    }
+    .places {
+        padding: 40px 0;
+        
+        &__title {
+            font-size: 25px;
+            line-height: 30px;
+            &_bold {
+                margin-bottom: 24px;
+            }
+        }
+        &__text {
+            margin-bottom: 24px;
+        }
+        &__header {
+            margin-bottom: 40px;
+        }
+        &__btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &__btn {
+            margin: 0 0 10px 0;
+        }
+    }
+    .partners {
+        padding: 40px 0;
+        &__text {
+            margin-bottom: 34px;
+        }
+        &__btn {
+            margin: 0 auto 12px auto;
+        }
+        &__link {
+            margin: 0 auto;
+        }
+        &__items {
+            display: block;            
+        }
+        &__subtitle {
+            text-align: center;
+        }
+        &__item {
+            margin: 0 auto;
+            &:not(:last-child) {
+                margin:0 auto 34px auto;
+            }
+        }
+    }
+    .sign {
+        padding: 40px 0;
+        &__title {
+            margin-bottom: 16px;
+            font-size: 26px;
+        }
+        &__text {
+            margin-bottom: 0;
+        }
+        &__download {
+            margin-top: 14px;
+        }
+        &__form {
+            flex-wrap: wrap;
+        }
+        &__address {
+            margin-top: 16px;
+        }
+        &__btn {
+            margin-top: 16px;
+        }
+    }
+}

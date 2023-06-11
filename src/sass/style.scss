@@ -1,0 +1,28 @@
+@import 'base/null';
+@import 'base/variables';
+@import 'base/icon-font';
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap');
+
+* {
+    font-family: 'Mulish', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1225px;
+    margin: 0 auto;
+}
+
+@import 'blocks/header';
+@import 'blocks/banner';
+@import 'blocks/footer';
+@import 'blocks/places';
+@import 'blocks/partners';
+@import 'blocks/sign';
+
+@import 'blocks/media';
